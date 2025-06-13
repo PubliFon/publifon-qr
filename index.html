@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redireccionando a Publifon…</title>
+  <script>
+    window.onload = function() {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (/android/i.test(ua)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=io.cordova.publifon&hl=es_MX";
+      } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/mx/app/publifon/id1463997921";
+      } else {
+        window.location.href = "https://www.publifon.com"; // Fallback, cámbialo si tienes web
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirigiendo a la tienda correspondiente…</p>
+</body>
+</html>
